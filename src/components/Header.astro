@@ -1,0 +1,21 @@
+---
+const { headerClass = '' } = Astro.props;
+---
+<header class={`header ${headerClass}`}>
+  <div class="header-container">
+    <div class="logo">
+      <a href="/">
+        <img src="/images/logo.png" alt="Sumaq Perú - Asociación Cultural" width="300" height="200">
+      </a>
+    </div>
+
+    <div class="header-content">
+      <h1 class="header-title">SUMAQ PERÚ</h1>
+      <p class="header-tagline">Asociación Cultural Andina</p>
+    </div>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">
+      <img src="/icons/menu.svg" alt="Menú">
+    </button>
+  </div>
+</header>

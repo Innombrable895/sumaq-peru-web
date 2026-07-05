@@ -1,0 +1,366 @@
+/* ============================================
+   HEADER - ESTILOS
+   ============================================ */
+
+.header {
+  background: linear-gradient(135deg, #8B4513 0%, #CD853F 100%);
+  color: white;
+  padding: 1.5rem 0;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
+  z-index: 100;
+}
+
+.header-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.95);
+  padding: 8px 10px;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  border: 2px solid rgba(255, 184, 107, 0.45);
+}
+
+.logo img {
+  height: 60px;
+  width: auto;
+  transition: transform 0.3s ease;
+  filter: drop-shadow(0 2px 4px rgba(0,0,0,0.15));
+}
+
+.logo a:hover img {
+  transform: scale(1.05);
+}
+
+.header-content {
+  flex: 1;
+  margin: 0 30px;
+  text-align: center;
+}
+
+.header-title {
+  font-size: 2rem;
+  font-weight: bold;
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.header-tagline {
+  font-size: 0.9rem;
+  margin: 5px 0 0 0;
+  font-style: italic;
+  opacity: 0.95;
+}
+
+.menu-toggle {
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 10px;
+}
+
+.menu-toggle img {
+  height: 30px;
+  width: 30px;
+  filter: brightness(0) invert(1);
+}
+
+/* ============================================
+   NAVBAR - ESTILOS
+   ============================================ */
+
+.navbar {
+  background-color: #333;
+  position: sticky;
+  top: 0;
+  z-index: 90;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  gap: 0;
+}
+
+.nav-item {
+  flex: 1;
+}
+
+.nav-link {
+  display: block;
+  padding: 15px 20px;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.nav-link:hover {
+  background-color: #CD853F;
+  color: #fff;
+}
+
+.nav-link.active {
+  background-color: #CD853F;
+  border-bottom: 3px solid #FFD700;
+}
+
+.menu-close {
+  display: none;
+  background: none;
+  border: none;
+  color: white;
+  font-size: 2rem;
+  cursor: pointer;
+  padding: 10px;
+}
+
+/* ============================================
+   FOOTER - ESTILOS
+   ============================================ */
+
+.footer {
+  background-color: #1a1a1a;
+  color: #ddd;
+  margin-top: 60px;
+  padding: 40px 0 20px;
+}
+
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.footer-section {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-logo {
+  height: 80px;
+  width: auto;
+  margin-bottom: 15px;
+}
+
+.footer-description {
+  line-height: 1.6;
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+.footer-title {
+  font-size: 1.2rem;
+  font-weight: bold;
+  color: #FFD700;
+  margin: 0 0 15px 0;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.footer-list li {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.footer-list a {
+  color: #ddd;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-list a:hover {
+  color: #FFD700;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background-color: #333;
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  padding: 0;
+}
+
+.social-links a:hover {
+  background-color: #CD853F;
+  transform: translateY(-3px);
+}
+
+.social-links img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s ease;
+}
+
+.social-links a:hover img {
+  filter: brightness(0) invert(1);
+}
+
+.footer-bottom {
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  text-align: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.footer-bottom p {
+  margin: 0;
+}
+
+/* ============================================
+   RESPONSIVE - MOBILE
+   ============================================ */
+
+@media (max-width: 768px) {
+  /* HEADER RESPONSIVE */
+  .header-container {
+    flex-wrap: wrap;
+  }
+
+  .logo img {
+    height: 50px;
+  }
+
+  .header-content {
+    margin: 10px 0;
+    min-width: 100%;
+    order: 3;
+  }
+
+  .header-title {
+    font-size: 1.5rem;
+  }
+
+  .header-tagline {
+    font-size: 0.8rem;
+  }
+
+  .menu-toggle {
+    display: block;
+    order: 2;
+  }
+
+  /* NAVBAR RESPONSIVE */
+  .navbar {
+    position: relative;
+  }
+
+  .navbar-container {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+  }
+
+  .nav-list.active {
+    max-height: 500px;
+  }
+
+  .nav-item {
+    flex: none;
+  }
+
+  .nav-link {
+    padding: 15px;
+    border-bottom: 1px solid #444;
+  }
+
+  .menu-close {
+    display: block;
+    align-self: flex-end;
+    position: absolute;
+    top: 10px;
+    right: 15px;
+  }
+
+  /* FOOTER RESPONSIVE */
+  .footer-container {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .footer-title {
+    font-size: 1rem;
+  }
+
+  .footer-section {
+    padding-bottom: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .header-title {
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+  }
+
+  .header-tagline {
+    display: none;
+  }
+
+  .nav-link {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+
+  .footer-logo {
+    height: 60px;
+  }
+
+  .footer-title {
+    font-size: 0.95rem;
+  }
+}

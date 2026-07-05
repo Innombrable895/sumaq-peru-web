@@ -1,0 +1,37 @@
+---
+import Base from '../layouts/Base.astro'
+---
+<Base headerClass="header--contacto">
+  <section slot="head">
+    <title>Contacto — Sumaq Perú</title>
+  </section>
+
+  <main class="contact-page">
+    <section class="contact-form-section">
+      <h2>Contacto</h2>
+      <p>Escríbenos para más información, colaborar o participar en nuestras actividades.</p>
+
+      <form id="contactForm" action="/backend/sendMail.php" method="post" class="contact-form">
+        <label for="name">Nombre</label>
+        <input type="text" id="name" name="name" required>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="message">Mensaje</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit" class="btn">Enviar</button>
+      </form>
+    </section>
+
+    <aside class="contact-info">
+      <h3>Información</h3>
+      <ul>
+        <li><strong>Email:</strong> <a href="mailto:info@sumaqperu.org">info@sumaqperu.org</a></li>
+        <li><strong>Teléfono:</strong> <a href="tel:+51987654321">+51 987 654 321</a></li>
+        <li><strong>Ubicación:</strong> Lima, Perú</li>
+      </ul>
+    </aside>
+  </main>
+</Base>

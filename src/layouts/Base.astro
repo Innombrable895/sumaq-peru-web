@@ -1,0 +1,24 @@
+---
+import Header from '../components/Header.astro'
+import Navbar from '../components/Navbar.astro'
+import Footer from '../components/Footer.astro'
+---
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <slot name="head" />
+    <link rel="icon" href="/favicon.ico">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/components.css">
+    <link rel="stylesheet" href="/css/responsive.css">
+  </head>
+  <body>
+    <Header headerClass={Astro.props.headerClass} />
+    <Navbar />
+    <slot />
+    <Footer />
+    <script type="module" src="/js/components.js"></script>
+  </body>
+  </html>

@@ -1,0 +1,32 @@
+---
+import Base from '../layouts/Base.astro'
+
+const photos = [
+  { src: '/images/Foto1.jpg', alt: 'Foto 1 de Sumaq Perú' },
+  { src: '/images/Foto2.jpg', alt: 'Foto 2 de Sumaq Perú' },
+  { src: '/images/Foto3.jpg', alt: 'Foto 3 de Sumaq Perú' },
+  { src: '/images/Foto4.jpg', alt: 'Foto 4 de Sumaq Perú' },
+  { src: '/images/Foto5.jpg', alt: 'Foto 5 de Sumaq Perú' }
+]
+---
+<Base headerClass="header--galeria">
+  <section slot="head">
+    <title>Galería — Sumaq Perú</title>
+  </section>
+
+  <main class="gallery-page">
+    <section class="gallery-intro">
+      <h2>Nuestra Galería</h2>
+      <p>Imágenes y recuerdos de nuestras actividades y eventos.</p>
+    </section>
+
+    <section class="gallery-grid" aria-label="Galería de fotos">
+      {photos.map((photo) => (
+        <figure class="gallery-card">
+          <img src={photo.src} alt={photo.alt} loading="lazy" />
+          <figcaption>{photo.alt}</figcaption>
+        </figure>
+      ))}
+    </section>
+  </main>
+</Base>
